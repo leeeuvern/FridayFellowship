@@ -5,71 +5,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcoming Event - Sheffield Chinese Christian Church</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #FFF5F2;
-            color: #362420;
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
-        .header {
-            background-color: #FDEDE3;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-        }
-        .content {
-            margin: 20px;
-            padding: 20px;
-            background-color: #FFFFFF;
-            border-radius: 8px;
-        }
-        .footer {
-            background-color: #FDEDE3;
+        .section {
+            min-height: 100vh;
+            width: 100%;
+            background-attachment: fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             color: #362420;
             text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        .section:nth-child(odd) {
+            background-color: #FFF5F2;
+        }
+        .section:nth-child(even) {
+            background-color: #FDEDE3;
+        }
+        .content {
+            width: 80%;
+            margin: auto;
+            position: relative;
         }
         .button {
             background-color: #D3463C;
             color: white;
             padding: 10px 20px;
-            text-align: center;
-            display: inline-block;
+            border: none;
             border-radius: 5px;
             text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 20px;
         }
-        img {
-            max-width: 100%;
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #FDEDE3;
+            color: #362420;
+        }
+        a {
+            color: #362420;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        h1, h2, p {
+            margin: 10px 0;
+        }
+        @media (max-width: 768px) {
+            .content {
+                width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        Sheffield Chinese Christian Church Welcoming Event
+    <!-- Header Section with Parallax Effect -->
+    <div class="section" style="background-image:url('your-header-image.jpg');">
+        <div class="content">
+            <h1>Sheffield Chinese Christian Church Welcoming Event</h1>
+            <p>Student Friday Fellowship - 4th October 2024</p>
+            <a href="INSERT_SIGN_UP_LINK_HERE" class="button">Sign Up Here</a>
+        </div>
     </div>
-    <div class="content">
-        <h2>Student Friday Fellowship - 4th October 2024</h2>
-        <p>Join us for dinner, games, worship and fellowship together from 6:30 PM to 9:30 PM. Our event is designed to welcome university students into our church community.</p>
-        <a href="INSERT_SIGN_UP_LINK_HERE" class="button">Sign Up Here</a>
-        <h3>Event Details:</h3>
-        <ul>
-            <li>Date: 4th October 2024</li>
-            <li>Time: 6:30 PM - 9:30 PM</li>
-            <li>Location: Sheffield Chinese Christian Church, 1 Anna Road, Heeley, Sheffield, S2 3DJ</li>
-        </ul>
-        <p>We also provide pickup services:</p>
-        <ul>
-            <li><a href="https://maps.google.com/?q=S3+7RD" target="_blank">The Diamond (S3 7RD)</a> at 6:00 PM</li>
-            <li><a href="https://maps.google.com/?q=S1+2QQ" target="_blank">The Hubs (S1 2QQ)</a> at 6:15 PM</li>
-            <li><a href="https://maps.google.com/?q=S2+4QZ" target="_blank">BP Station (S2 4QZ)</a> at 6:15 PM</li>
-        </ul>
-        <p>Follow us on Instagram! <a href="https://www.instagram.com/YOUR_INSTAGRAM">Our Instagram</a></p>
-        <img src="QR_CODE_IMAGE_LINK_HERE" alt="QR Code for Sign Up">
+
+    <!-- Event Details Section -->
+    <div class="section">
+        <div class="content">
+            <h2>Event Details</h2>
+            <p>Date: 4th October 2024</p>
+            <p>Time: 6:30 PM - 9:30 PM</p>
+            <p>Location: Sheffield Chinese Christian Church, 1 Anna Road, Heeley, Sheffield, S2 3DJ</p>
+        </div>
     </div>
+
+    <!-- Pickup Locations Section -->
+    <div class="section">
+        <div class="content">
+            <h2>Pickup Services</h2>
+            <p>We provide pickup services at the following locations:</p>
+            <ul>
+                <li><a href="https://maps.google.com/?q=S3+7RD" target="_blank">The Diamond (S3 7RD)</a> at 6:00 PM</li>
+                <li><a href="https://maps.google.com/?q=S1+2QQ" target="_blank">The Hubs (S1 2QQ)</a> at 6:15 PM</li>
+                <li><a href="https://maps.google.com/?q=S2+4QZ" target="_blank">BP Station (S2 4QZ)</a> at 6:15 PM</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
     <div class="footer">
         © 2024 Sheffield Chinese Christian Church
     </div>
