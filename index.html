@@ -124,7 +124,6 @@
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            flex-wrap: wrap;
         }
 
         .icon {
@@ -133,27 +132,60 @@
             color: #D3463C;
         }
 
-        /* Parallax effect for mobile */
+        /* Event details styling */
+        .event-details {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .event-details p {
+            margin: 5px 0;
+        }
+
+        /* Pickup section with map */
+        .pickup-section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+        .pickup-list {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .pickup-list h2 {
+            text-align: left;
+        }
+
+        .pickup-list ul {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        .map-container {
+            flex: 1;
+            height: 400px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Make the layout stack vertically on smaller screens */
         @media (max-width: 768px) {
-            .content {
-                width: 90%;
+            .pickup-section {
+                flex-direction: column;
             }
 
-            .icons {
-                justify-content: center; /* Ensure icons are horizontal */
-            }
-
-            .event-title {
-                font-size: 40px;
-            }
-
-            .event-subtitle {
-                font-size: 20px;
-            }
-
-            /* Parallax scrolling for mobile */
-            .section {
-                background-attachment: fixed;
+            .pickup-list, .map-container {
+                padding: 0;
+                width: 100%;
             }
         }
     </style>
@@ -174,7 +206,7 @@
             <p class="event-subtitle">Student Friday Fellowship - 4th October 2024</p>
 
             <!-- Button for sign-up -->
-            <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfMZpRZji7CdojgmDNrWII5I_n01pYhF8MpD_PWbx8cyQZCBg/viewform?usp=sf_link&pli=1" class="button">Sign Up Here</a>
+            <a href="INSERT_SIGN_UP_LINK_HERE" class="button">Sign Up Here</a>
 
             <!-- Icons for food, games, fellowship, etc. -->
             <div class="icons">
@@ -183,29 +215,37 @@
                 <i class="fas fa-gamepad icon"></i>
                 <i class="fas fa-users icon"></i>
             </div>
+
+            <!-- Event Details Section -->
+            <div class="event-details">
+                <p><strong>Date:</strong> 4th October 2024</p>
+                <p><strong>Time:</strong> 6:30 PM - 9:30 PM</p>
+                <p><strong>Location:</strong> Sheffield Chinese Christian Church, 1 Anna Road, Heeley, Sheffield, S2 3DJ</p>
+            </div>
         </div>
     </div>
 
-    <!-- Event Details Section -->
+    <!-- Pickup Locations Section with Map -->
     <div class="section">
         <div class="content">
-            <h2>Event Details</h2>
-            <p>Date: 4th October 2024</p>
-            <p>Time: 6:30 PM - 9:30 PM</p>
-            <p>Location: Sheffield Chinese Christian Church, 1 Anna Road, Heeley, Sheffield, S2 3DJ</p>
-        </div>
-    </div>
+            <div class="pickup-section">
+                <!-- Pickup List -->
+                <div class="pickup-list">
+                    <h2>Pickup Services</h2>
+                    <p>We provide pickup services at the following locations:</p>
+                    <ul>
+                        <li><a href="https://maps.google.com/?q=S3+7RD" target="_blank">The Diamond (S3 7RD)</a> at 6:00 PM</li>
+                        <li><a href="https://maps.google.com/?q=S1+2QQ" target="_blank">The Hubs (S1 2QQ)</a> at 6:15 PM</li>
+                        <li><a href="https://maps.google.com/?q=S2+4QZ" target="_blank">BP Station (S2 4QZ)</a> at 6:15 PM</li>
+                    </ul>
+                </div>
 
-    <!-- Pickup Locations Section -->
-    <div class="section">
-        <div class="content">
-            <h2>Pickup Services</h2>
-            <p>We provide pickup services at the following locations:</p>
-            <ul>
-                <li><a href="https://maps.google.com/?q=S3+7RD" target="_blank">The Diamond (S3 7RD)</a> at 6:00 PM</li>
-                <li><a href="https://maps.google.com/?q=S1+2QQ" target="_blank">The Hubs (S1 2QQ)</a> at 6:15 PM</li>
-                <li><a href="https://maps.google.com/?q=S2+4QZ" target="_blank">BP Station (S2 4QZ)</a> at 6:15 PM</li>
-            </ul>
+                <!-- Map Container -->
+                <div class="map-container">
+                    <!-- Embed your custom Google map here -->
+                    <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1fcZU9nzBnCvLwoUyJnGC1-3CzwtN_Vg&ehbc=2E312F&noprof=1" width="640" height="480"></iframe>
+                </div>
+            </div>
         </div>
     </div>
 
