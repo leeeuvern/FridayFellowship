@@ -10,29 +10,38 @@
             padding: 0;
             font-family: Arial, sans-serif;
             scroll-behavior: smooth;
+            background-color: #FFF5F2;
         }
+
         .section {
             min-height: 100vh;
             width: 100%;
-            background-attachment: fixed;
             background-size: cover;
+            background-position: center;
             display: flex;
             justify-content: center;
             align-items: center;
             color: #362420;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
         .section:nth-child(odd) {
             background-color: #FFF5F2;
         }
+
         .section:nth-child(even) {
             background-color: #FDEDE3;
         }
+
         .content {
             width: 80%;
             margin: auto;
             position: relative;
+            z-index: 10;
         }
+
         .button {
             background-color: #D3463C;
             color: white;
@@ -45,36 +54,135 @@
             display: inline-block;
             margin-top: 20px;
         }
+
+        /* Header text styling to match the poster */
+        .church-name {
+            font-size: 20px;
+            color: #D3463C;
+            font-weight: normal;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        .event-title {
+            font-size: 60px;
+            font-weight: bold;
+            color: #000;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        .event-subtitle {
+            font-size: 30px;
+            font-weight: normal;
+            color: #D3463C;
+            margin-bottom: 20px;
+        }
+
         .footer {
             text-align: center;
             padding: 20px;
             background-color: #FDEDE3;
             color: #362420;
         }
+
         a {
             color: #362420;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         h1, h2, p {
             margin: 10px 0;
         }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        /* Background Shape and Parallax Effect */
+        .background-shape {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('your-background-pattern.png') no-repeat center center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .icon {
+            margin: 0 15px;
+            font-size: 30px;
+            color: #D3463C;
+        }
+
+        /* Parallax effect for mobile */
         @media (max-width: 768px) {
             .content {
                 width: 90%;
             }
+
+            .icons {
+                justify-content: center; /* Ensure icons are horizontal */
+            }
+
+            .event-title {
+                font-size: 40px;
+            }
+
+            .event-subtitle {
+                font-size: 20px;
+            }
+
+            /* Parallax scrolling for mobile */
+            .section {
+                background-attachment: fixed;
+            }
         }
     </style>
+    <script src="https://kit.fontawesome.com/7abb785330.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Header Section with Parallax Effect -->
-    <div class="section" style="background-image:url('your-header-image.jpg');">
+    <!-- Header Section with Background Pattern -->
+    <div class="section" style="background-image:url('your-header-image.jpg'); background-size: cover;">
+        <div class="background-shape"></div>
         <div class="content">
-            <h1>Sheffield Chinese Christian Church Welcoming Event</h1>
-            <p>Student Friday Fellowship - 4th October 2024</p>
-            <a href="INSERT_SIGN_UP_LINK_HERE" class="button">Sign Up Here</a>
+            <!-- Add the Church Name smaller and at the top -->
+            <p class="church-name">Sheffield Chinese Christian Church</p>
+            
+            <!-- Bold, large title for the welcoming event -->
+            <h1 class="event-title">Welcoming Event</h1>
+            
+            <!-- Subheader with the event type and date -->
+            <p class="event-subtitle">Student Friday Fellowship - 4th October 2024</p>
+
+            <!-- Button for sign-up -->
+            <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfMZpRZji7CdojgmDNrWII5I_n01pYhF8MpD_PWbx8cyQZCBg/viewform?usp=sf_link&pli=1" class="button">Sign Up Here</a>
+
+            <!-- Icons for food, games, fellowship, etc. -->
+            <div class="icons">
+                <i class="fas fa-utensils icon"></i>
+                <i class="fas fa-cross icon"></i>
+                <i class="fas fa-gamepad icon"></i>
+                <i class="fas fa-users icon"></i>
+            </div>
         </div>
     </div>
 
