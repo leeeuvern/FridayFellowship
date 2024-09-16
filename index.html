@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcoming Event - Sheffield Chinese Christian Church</title>
@@ -22,8 +21,6 @@
     <meta name="twitter:description" content="Join us for a night of fellowship, games, and worship at the Sheffield Chinese Christian Church on 4th October 2024!">
     <meta name="twitter:image" content="https://leeeuvern.github.io/FridayFellowship/welcoming.jpg">
 
-  
-    <title>Welcoming Event - Sheffield Chinese Christian Church</title>
     <style>
         body, html {
             margin: 0;
@@ -167,7 +164,7 @@
         .pickup-section {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center; /* Center content horizontally */
             align-items: flex-start;
             margin-top: 40px;
         }
@@ -175,15 +172,16 @@
         .pickup-list {
             flex: 1;
             padding-right: 20px;
+            text-align: center; /* Centering the text */
         }
 
         .pickup-list h2 {
-            text-align: left;
+            text-align: center; /* Centering the Pickup Services heading */
         }
 
         .pickup-list ul {
-            text-align: left;
             font-size: 18px;
+            text-align: center; /* Centering the pickup locations */
         }
 
         .map-container {
@@ -206,6 +204,15 @@
             .pickup-list, .map-container {
                 padding: 0;
                 width: 100%;
+            }
+
+            /* Ensure "Welcoming" fits on mobile screens */
+            .event-title {
+                font-size: 10vw;  /* Make it responsive based on the screen width */
+            }
+
+            .event-subtitle {
+                font-size: 6vw;  /* Responsive subtitle */
             }
         }
     </style>
